@@ -1,7 +1,7 @@
 import Principal from "./pages/Principal";
 import Login from "./forms/login"
 import Signup from "./forms/signup"
-import Publications from "./post/Publications";
+import Calculator from "./post/Calculator";
 import {
   createBrowserRouter,
   RouterProvider,
@@ -17,7 +17,7 @@ const router = createBrowserRouter([
       {
         path: "login", element: <Login />},
       {
-        path: "Post", element: <Publications />},
+        path: "Post", element: <Calculator />},
     ],
   },
 ])
