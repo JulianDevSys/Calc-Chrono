@@ -1,0 +1,63 @@
+.principal_container{
+    display: flex;
+    flex-direction: column;
+    background-image: url("https://media.istockphoto.com/id/1219382595/es/vector/ecuaciones-matem%C3%A1ticas-escritas-en-una-pizarra.jpg?s=612x612&w=0&k=20&c=jZTHzOprZnmtqx4tlDF4UIuf5t0TNTkniulOmxnVX-M="); 
+    height: 97vh;
+    background-color: rgb(105, 0, 0);
+
+}
+
+.container_header{
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(248, 248, 248);
+    gap: 5%;
+}
+.registration_form{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(189, 186, 186);
+    gap: 15px;
+    padding: 15px;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    
+}
+
+.input_forms{
+    width: 100%;
+    height: 12%;
+}
+
+#registro{
+    font-family:Arial, Helvetica, sans-serif;
+    font-optical-sizing: auto;
+    font-size: 30px;
+    font-style: normal;  
+
+
+}
+.form_image{
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    width: 80%;
+    height: 70%;
+    justify-content: center;
+}
+
+.image{
+    width: 450px ;
+}
+
+.btn-register{
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    height: 35px;
+    width: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+}
