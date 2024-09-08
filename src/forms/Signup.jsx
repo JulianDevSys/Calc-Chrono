@@ -19,9 +19,9 @@ export default function Signup() {
     } else if (username.trim() == " ") {
       return "el nombre de usuario no puede contener espacios";
     }
-
+    else{
     alert("datos guardados exitosamente");
-    redirection("/login");
+    redirection("/login");}
   };
 
   return (

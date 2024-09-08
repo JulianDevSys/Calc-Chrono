@@ -20,9 +20,13 @@
 
 .display{
     background-color: black;
-    width: 100%;
+    width: 400px;
+    height: 100px;
     color: white;
     font-size: 80px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scrollbar-width: thin;
     border-radius: 30px;
     gap: 10px;
 }

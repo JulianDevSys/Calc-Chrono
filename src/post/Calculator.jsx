@@ -1,61 +1,91 @@
 import { useState } from "react";
+import resolve from "../utils/algorithm";
 import "./styleCalculator.css";
-export default function Calculator() {
 
+
+export default function Calculator() {
+  const [display, setDisplay] = useState('');
+
+
+
+  const getValor = (e) => {
+    setDisplay(display + e.target.textContent);
+  };
 
   return (
     <div>
+      {/* encabezado */}
+      <div className="container_header">
+        <p>calculator </p>
+        <p>Timer</p>
+      </div>
 
-    {/* encabezado */}
-    <div className="container_header">
-    <p >calculator </p>
-    <p >accoordion</p>
+      <h1 className="letter">Bienvenidos a mi primera calculadora</h1>
+
+      <div className="calculator">
+        <div>
+          <div className="display">{display}</div>
+
+          <div className="row">
+            <button className="number operator" onClick={getValor}>!</button>
+            <button className="number operator" onClick={getValor}>^</button>
+            <button className="number operator" onClick={getValor}>-</button>
+            <button className="number operator" onClick={getValor}>+</button>
+          </div>
+          <div className="row">
+            <button className="number" onClick={getValor}>
+              7
+            </button>
+            <button className="number" onClick={getValor}>
+              8
+            </button>
+            <button className="number" onClick={getValor}>
+              9
+            </button>
+            <button className="number" onClick={()=>{
+            setDisplay('')
+            }} >c</button>
+          </div>
+          <div className="row">
+            <button className="number" onClick={getValor}>
+              4
+            </button>
+            <button className="number" onClick={getValor}>
+              5
+            </button>
+            <button className="number" onClick={getValor}>
+              6
+            </button>
+            <button className="number" onClick={getValor}>
+              /
+            </button>
+          </div>
+          <div className="row">
+            <button className="number operator" onClick={getValor}>
+              1
+            </button>
+            <button className="number" onClick={getValor}>
+              2
+            </button>
+            <button className="number" onClick={getValor}>
+              3
+            </button>
+            <button className="number" onClick={getValor}>*</button>
+          </div>
+          <div className="row">
+            <button className="number operator" onClick={getValor}>
+              0
+            </button>
+            <button className="number operator" onClick={getValor}>
+              00
+            </button>
+            <button className="number delete">.</button>
+            <button className="number answer" onClick={()=>{
+              setDisplay(resolve(display) ?? '')
+            }}> = </button>
+          </div>
+        </div>
+      </div>
     </div>
-
-    <h1 className="letter">Bienvenidos a mi primera calculadora</h1>
-
-    <div className="calculator">
-
-
-      <div>
-        <div className="display">0</div>
-
-        <div className="row">
-          <button className="number operator">!</button>
-          <button className="number operator">^</button>
-          <button className="number operator">-</button>
-          <button className="number operator">+</button>
-          </div>
-          <div className="row">
-          <button className="number">7</button>
-          <button className="number">8</button>
-          <button className="number">9</button>
-          <button className="number">c</button>
-          </div>
-          <div className="row">
-          <button className="number">4</button>
-          <button className="number">5</button>
-          <button className="number">6</button>
-          <button className="number">/</button>
-          </div>
-          <div className="row">
-          <button className="number operator">1</button>
-          <button className="number">2</button>
-          <button className="number">3</button>
-          <button className="number">x</button>
-          </div>
-          <div className="row">        
-          <button className="number operator">0</button>
-          <button className="number operator">00</button>
-          <button className="number delete">.</button>
-          <button className="number answer">=</button>
-          </div>  
-
-        </div>
-        </div>
-
-</div>
-
-
-  )
+  );
 }
