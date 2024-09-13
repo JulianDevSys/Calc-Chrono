@@ -2,6 +2,7 @@ import Principal from "./pages/Principal";
 import Login from "./forms/login"
 import Signup from "./forms/signup"
 import Calculator from "./post/Calculator";
+import Timer from "./post/Timer";
 import {
   createBrowserRouter,
   RouterProvider,
@@ -18,6 +19,8 @@ const router = createBrowserRouter([
         path: "login", element: <Login />},
       {
         path: "Post", element: <Calculator />},
+
+      { path: "Timer", element: <Timer />},
     ],
   },
 ])

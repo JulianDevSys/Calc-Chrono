@@ -1,53 +1,54 @@
-import { useState } from "react";
-export default function Timer(){
+import { useState, useEffect } from "react";
+import "./styleTimer.css";
+import { useNavigate } from "react-router-dom";
 
+export default function Timer() {
+  const [time, setTime] = useState(new Date());
+  const navigate = useNavigate();
 
-let [likes, setLikes] = useState(0);
-let [valor, setValor] = useState(0);
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setTime(new Date());
+    }, 1000); // Actualizar cada segundo
 
-const aumnetarLikes = () => {
-  isNaN(parseInt(valor)) ? (valor = 0) : setLikes(likes + parseInt(valor));
-  console.log(parseInt(valor));
-};
-const disminuirLikes = () => {
-  isNaN(parseInt(valor)) ? (valor = 0) : setLikes(likes - parseInt(valor));
-  likes - parseInt(valor) <= 0
-    ? setLikes(0)
-    : setLikes(likes - parseInt(valor));
-};
+    return () => clearInterval(timer); // Limpiar el intervalo cuando el componente se desmonta
+  }, []);
 
-const rango = (e) => {
-  setValor(e.target.value);
-};
+  // Formato de la hora
+  const formatTime = (date) => {
+    const hours = String(date.getHours()).padStart(2, "0");
+    const minutes = String(date.getMinutes()).padStart(2, "0");
+    const seconds = String(date.getSeconds()).padStart(2, "0");
+    return `${hours}:${minutes}:${seconds}`;
+  };
 
-return(
-        
-
-<div>
-{" "}
-<h2>likes {likes}</h2>
-
-<input
-type="text"
-placeholder="aumentador de likes"
-id=""
-onChange={rango}
-/>
-
-<button
-onClick={() => {
-  aumnetarLikes();
-}}
->
-aumentador likes
-</button>
-<button
-onClick={() => {
-  disminuirLikes();
-}}
->
-desminuir likes
-</button>
-</div>
-)
+  return (
+    <div className="principal_container">
+      <div className="container_header">
+        <p
+          onClick={() => {
+            navigate("/post");
+          }}
+        >
+          Calculator
+        </p>
+        <p
+          onClick={() => {
+            navigate("/timer");
+          }}
+        >
+          Timer
+        </p>
+      </div>
+      <div className="all_clock">
+        <div className="clock">
+          <div className="buttons">
+            <div className="chronometer">Chronometer</div>
+            <div className="chronometer">TimeTable</div>
+          </div>
+          <div className="displayTimer">{formatTime(time)}</div>
+        </div>
+      </div>
+    </div>
+  );
 }

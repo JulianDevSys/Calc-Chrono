@@ -1,23 +1,29 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import resolve from "../utils/algorithm";
 import "./styleCalculator.css";
 
 
 export default function Calculator() {
   const [display, setDisplay] = useState('');
-
+  const navigate= useNavigate()
 
 
   const getValor = (e) => {
     setDisplay(display + e.target.textContent);
   };
 
+
   return (
     <div>
       {/* encabezado */}
       <div className="container_header">
-        <p>calculator </p>
-        <p>Timer</p>
+        <p onClick={()=>{  
+          navigate("/post")
+        }}>calculator </p>
+        <p  onClick={()=>{  
+          navigate("/timer")
+        }}>Timer </p>
       </div>
 
       <h1 className="letter">Bienvenidos a mi primera calculadora</h1>

@@ -1,0 +1,41 @@
+.all_clock{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.clock{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(173, 173, 173);
+    height: 50%;
+    width:50%;
+    justify-content: center;
+    align-items: center;
+    border-radius: 35px;
+
+}
+
+.displayTimer{
+    background-color: black;
+    height: 70%;
+    width: 85%;
+    color: red;
+    font-size: 150px;
+
+}
+
+.buttons{
+    display: flex;
+    flex-direction: row;
+    margin-right: 50%;
+}
+.chronometer{
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    height: 35px;
+    width: 130px;
+    border-radius: 20px;  
+    align-content: center;
+
+}
