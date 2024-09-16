@@ -18,7 +18,7 @@ const validation = () => {
 
    alert("datos correctos, bienvenido a nuestra pagina");
    flag = true;
-   redirection("/Post");
+   redirection("/Calculator");
 };
 const onlyLogIn = () => {
    if (flag == false) {
@@ -31,8 +31,8 @@ return (
    <div className="principal_container">
       {/* encabezado */}
       <div className="container_header">
-      <p onClick={onlyLogIn}>calculator </p>
-      <p onClick={onlyLogIn}>accoordion</p>
+      <p onClick={onlyLogIn}>Calculator </p>
+      <p onClick={onlyLogIn}>Timer</p>
       </div>
 
       <div className="form_image">

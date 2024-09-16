@@ -19,10 +19,10 @@ export default function Calculator() {
       {/* encabezado */}
       <div className="container_header">
         <p onClick={()=>{  
-          navigate("/post")
+          navigate("/Calculator")
         }}>calculator </p>
         <p  onClick={()=>{  
-          navigate("/timer")
+          navigate("/clock")
         }}>Timer </p>
       </div>
 

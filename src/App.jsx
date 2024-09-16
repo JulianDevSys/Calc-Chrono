@@ -2,7 +2,9 @@ import Principal from "./pages/Principal";
 import Login from "./forms/login"
 import Signup from "./forms/signup"
 import Calculator from "./post/Calculator";
-import Timer from "./post/Timer";
+import Timer from "./pages/Timer";
+import Clock from "./post/Clock";
+import Chronometer from "./post/Chronometer";
 import {
   createBrowserRouter,
   RouterProvider,
@@ -18,11 +20,23 @@ const router = createBrowserRouter([
       {
         path: "login", element: <Login />},
       {
-        path: "Post", element: <Calculator />},
-
-      { path: "Timer", element: <Timer />},
+        path: "Calculator", element: <Calculator />},
+        
+        
+      
     ],
   },
+  {
+    path: "/",
+    element: <Timer />,
+    children:[
+      {
+        path: "clock", element: <Clock/>},
+      {
+        path: "clock/cronometro", element: <Chronometer/>},
+
+    ]
+  }
 ])
 
 

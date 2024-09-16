@@ -9,33 +9,48 @@
     flex-direction: column;
     background-color: rgb(173, 173, 173);
     height: 50%;
-    width:50%;
+    width:53%;
     justify-content: center;
     align-items: center;
-    border-radius: 35px;
+    border-radius: 30px;
 
 }
 
 .displayTimer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: black;
-    height: 70%;
-    width: 85%;
+    border-radius: 10px;
+    height: 90%;
     color: red;
     font-size: 150px;
-
 }
 
 .buttons{
     display: flex;
     flex-direction: row;
-    margin-right: 50%;
+    gap: 30px;
+    padding: 2px;
+    width: 83%;
 }
 .chronometer{
-    color: rgb(255, 255, 255);
-    cursor: pointer;
-    height: 35px;
+    display: flex;
+    color: aliceblue;
+    font-size: 20px;
+    background-color: rgb(126, 124, 124);
+    border-radius: 10px;
     width: 130px;
-    border-radius: 20px;  
-    align-content: center;
+    justify-content: center;
+    cursor: pointer;
+}
 
+.chronometer-container{
+    width: 82%;
+    height: 80%;
+}
+
+.container{
+    width: 82%;
+    height: 80%;
 }
