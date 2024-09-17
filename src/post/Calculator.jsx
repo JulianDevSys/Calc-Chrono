@@ -20,7 +20,7 @@ export default function Calculator() {
       <div className="container_header">
         <p onClick={()=>{  
           navigate("/Calculator")
-        }}>calculator </p>
+        }}>Calculator </p>
         <p  onClick={()=>{  
           navigate("/clock")
         }}>Timer </p>

@@ -10,7 +10,7 @@ export default function Timer() {
         <p onClick={() => navigate("/calculator")}>Calculator</p>
         <p onClick={() => navigate("/timer")}>Timer</p>
       </div>
-
+      <h1 className="letter1">mi primer reloj</h1>
       <div className="all_clock">
         <div className="clock">
           <div className="buttons">
